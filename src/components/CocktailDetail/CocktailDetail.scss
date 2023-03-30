@@ -1,0 +1,65 @@
+@use "/src/scss/index.scss" as *;
+
+.Detail {
+  width: 100%;
+  padding: 2rem 9rem;
+
+
+  &-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    gap: 6.25rem;
+
+    @include tablet(){
+      flex-flow: column wrap;
+      height: 100%;
+    }
+
+  }
+
+  &-img {
+    max-width: 30em;
+    border-radius: .85rem;
+  }
+
+  &-h2 {
+    font-size: 2.25em;
+    margin: 0.8em 0 1.6em 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4%;
+      height: 10%;
+      background-color: rgba(219, 87, 21, 0.7960784314);
+      top: 1.4em;
+      right: 48%;
+    }
+  }
+
+  &-h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+  }
+
+  &-ul {
+    margin: 0 0 1em 1.8em ;
+  }
+
+  &-li {
+    list-style: circle;
+    margin: 0 0 .5em;
+  }
+
+  &-p {
+    text-align: justify;
+    font-weight: 400;
+    font-size: .95em;
+  }  
+}

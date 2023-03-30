@@ -1,0 +1,39 @@
+@use "/src/scss/index.scss" as *;
+
+.Header {
+  width: 100%;
+  padding: 1rem 9rem;
+  color:$white;
+  background-color: $header;
+  box-shadow: 0 0 1em rgba(0,0,0,0.2);
+
+  @include mobile {
+    padding: 1rem 0;
+  }
+
+  .Wrapper {
+    @include flex(row, nowrap, space-between, center);
+    @include mobile {
+      @include flex(column, wrap, center, center);
+      gap: 20px;
+
+    }
+  }
+  &-h1 {
+    font-size: 1.25rem;
+    max-width: 15rem;
+    @include flex(row, nowrap, space-around, center);
+    cursor: pointer
+  }
+
+  &-ul {
+    @include flex(row, nowrap, center, center);
+    gap: 4.125rem;
+    font-size: 1.05rem;
+    
+  }
+
+  &-a {
+    cursor: pointer;
+  }
+}
